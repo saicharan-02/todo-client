@@ -68,7 +68,7 @@ function Home() {
       </div>
 
       {/* Form Element */}
-      <div className="flex flex-row justify-center items-center  mb-7 mt-4">
+      <div className="flex flex-row justify-between items-center mb-7 mt-4">
         <form
           onSubmit={(e) => {
             handleOnSubmit(e);
@@ -80,7 +80,7 @@ function Home() {
             placeholder="Add Task"
             value={taskData}
             onChange={(e) => setTaskData(e.target.value)}
-            className="w-80 rounded-md p-2 border-2 border-slate-400 placeholder:text-sm hover:border-purple-500 focus:outline-none focus:border-purple-500 focus:bg-purple-200 transition-colors duration-300 ease-in"
+            className="sm:w-72 rounded-md p-2 border-2 border-slate-400 placeholder:text-sm hover:border-purple-500 focus:outline-none focus:border-purple-500 focus:bg-purple-200 transition-colors duration-300 ease-in"
           />
           <input
             type="submit"
@@ -92,7 +92,7 @@ function Home() {
       </div>
 
       {/* Task Elements */}
-      <div>
+      <div className="w-96 ">
         {tasks.map((task) => (
           <Task key={task.id} indTask={task} index={++count} />
         ))}

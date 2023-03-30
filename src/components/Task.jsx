@@ -23,11 +23,11 @@ function Task(props) {
 
   return (
     <div
-      className={`flex flex-row ${
+      className={`flex flex-row justify-between ${
         props.index % 2 === 0 ? "" : "bg-slate-300"
-      } px-6 py-2 `}
+      } px-6 py-2 mx-8 sm:mx-0`}
     >
-      <p className="w-[23rem] break-words">
+      <p className="break-words">
         {`${props.index}. ${props.indTask.task}`}
       </p>
 
